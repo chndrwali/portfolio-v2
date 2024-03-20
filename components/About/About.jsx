@@ -40,12 +40,12 @@ const qualificationData = [
       },
       {
         university: 'SMK Pasundan 2 Bandung',
-        qualification: 'student',
+        qualification: 'Student',
         years: '2017 - 2020',
       },
       {
         university: 'SMPN 26 Bandung',
-        qualification: 'student',
+        qualification: 'Student',
         years: '2014 - 2017',
       },
     ],
@@ -55,25 +55,25 @@ const qualificationData = [
     data: [
       {
         company: 'DevHandal(CodePolitan & Alibaba Cloud)',
-        qualification: 'Learn JavaScript Expert',
+        role: 'Learn JavaScript Expert',
         years: 'August 2023 - Now',
         location: 'Bandung, Indonesia (Remote)',
       },
       {
         company: 'IDCamp 2023',
-        qualification: 'Learn Machine Learning Intermediate',
+        role: 'Learn Machine Learning Intermediate',
         years: 'Sept 2023 - Jan 2024',
         location: 'Bandung, Indonesia (Remote)',
       },
       {
         company: 'Orbit Campus (MSIB) - Artificial Intelligences 4 Jobs',
-        qualification: 'Group leader, Front End Dev, Machine Learning Dev',
+        role: 'Group leader, Front End Dev, Machine Learning Dev',
         years: 'Aug 2023 - Jan 2024',
         location: 'Jakarta, Indonesia (Remote)',
       },
       {
         company: 'Dicoding Indonesia (MSIB) - Front End Web & Back End ',
-        qualification: 'Front End Developer',
+        role: 'Front End Developer',
         years: 'Feb 2023 - June 2023',
         location: 'Bandung, Indonesia (Remote)',
       },
@@ -146,20 +146,83 @@ const About = () => {
               </TabsList>
               <div className="text-lg mt-12 xl:mt-8 ">
                 <TabsContent value="personal">
-                  <div className='text-center xl:text-left'>
+                  <div className="text-center xl:text-left">
                     <h3 className="h3 mb-4">Unmatched Service Quality for Over 10 Years</h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui!</p>
-                    <div className='grid xl:grid-cols-2 gap-4 mb-12'>
-                        {infoData.map((item, index) =>{
-                            return <div key={index} className='flex items-center gap-x-4 mx-auto xl:mx-0'>
-                                <div className='text-primary'>{item.icon}</div>
-                                <div>{item.text}</div>
-                            </div>
-                        })}
+                    <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                      {infoData.map((item, index) => {
+                        return (
+                          <div key={index} className="flex items-center gap-x-4 mx-auto xl:mx-0">
+                            <div className="text-primary">{item.icon}</div>
+                            <div>{item.text}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="flex flex-col gap-y-2">
+                      <div className="text-primary">Language Skill</div>
+                      <div className="border-b border-border"></div>
+                      <div>Indonesian, Sundanese, Arabic</div>
                     </div>
                   </div>
                 </TabsContent>
-                <TabsContent value="qualifications">Qualifications</TabsContent>
+                <TabsContent value="qualifications">
+                  <div>
+                    <h3 className="h3 mb-8 text-center xl:text-left">My Awesome Journey</h3>
+                    <div className='grid md:grid-cols-2 gap-y-8 '>
+                      <div className='flex flex-col gap-y-6'>
+                        <div className='flex gap-x-4 items-center text-[22px] text-primary'>
+                          <Briefcase />
+                          <h4 className="capitalize font-medium">{getData(qualificationData, 'experience').title}</h4>
+                        </div>
+                        <div className='flex flex-col gap-y-8'>
+                        {getData(qualificationData, 'experience').data.map((item, index) => {
+                            const {company, role, years, location} = item;
+                            
+                            return (
+                                <div key={index} className='flex gap-x-8 group'>
+                                    <div className='h-[84px] w-[1px] bg-border relative ml-2'>
+                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all'></div>
+                                    </div>
+                                    <div>
+                                        <div className='font-semibold text-2xl leading-none mb-2 '>{company}</div>
+                                        <div className='text-lg leading-none text-muted-foreground mb-4'>{role}</div>
+                                        <div className='text-base font-medium '>{location}</div>
+                                        <div>{years}</div>
+                                    </div>
+                                </div> 
+                            )
+                        })}
+                        </div>
+                      </div>
+                      <div className='flex flex-col gap-y-6'>
+                        <div className='flex gap-x-4 items-center text-[22px] text-primary'>
+                          <GraduationCap size={20} />
+                          <h4 className="capitalize font-medium">{getData(qualificationData, 'education').title}</h4>
+                        </div>
+                        <div className='flex flex-col gap-y-8'>
+                        {getData(qualificationData, 'education').data.map((item, index) => {
+                            const {university, qualification, years } = item;
+                            
+                            return (
+                                <div key={index} className='flex gap-x-8 group '>
+                                    <div className='h-[84px] w-[1px] bg-border relative ml-2'>
+                                        <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all'></div>
+                                    </div>
+                                    <div>
+                                        <div className='font-semibold text-2xl leading-none mb-2 '>{university}</div>
+                                        <div className='text-lg leading-none text-muted-foreground mb-4'>{qualification}</div>
+                                        <div className='text-base font-medium '>{years}</div>
+                                       
+                                    </div>
+                                </div> 
+                            )
+                        })}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
                 <TabsContent value="skills">Skill</TabsContent>
               </div>
             </Tabs>
