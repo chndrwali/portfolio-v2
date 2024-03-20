@@ -2,22 +2,23 @@ import { GanttChartSquare, Blocks, Gem } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const servicesData = [
-  {
-    icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
-    title: 'Web Design',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-  },
-  {
-    icon: <Blocks size={72} strokeWidth={0.8} />,
-    title: 'Web Development',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-  },
-  {
-    icon: <Gem size={72} strokeWidth={0.8} />,
-    title: 'App Development',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-  },
-];
+    {
+      icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
+      title: 'Web Design',
+      description: 'I specialize in creating visually stunning and user-friendly websites that effectively communicate your brand message. Let me help you bring your vision to life!',
+    },
+    {
+      icon: <Blocks size={72} strokeWidth={0.8} />,
+      title: 'Web Development',
+      description: 'With expertise in front-end and back-end development, I build custom solutions tailored to your specific needs. From e-commerce platforms to corporate websites, I deliver high-quality results.',
+    },
+    {
+      icon: <Gem size={72} strokeWidth={0.8} />,
+      title: 'App Development',
+      description: 'From concept to launch, I provide full-stack development services for mobile applications. Whether you need a native or cross-platform solution, I have the skills to bring your app idea to fruition.',
+    },
+  ];
+  
 const Services = () => {
   return (
     <section className="mb-12 xl:mb-36">

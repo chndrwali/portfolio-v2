@@ -12,23 +12,23 @@ import Link from "next/link";
 
 const icons = [
     {
-        path:'/',
+        path:'https://www.linkedin.com/in/chndrwali/',
         name: <RiLinkedinFill />
     },
     {
-        path:'/',
+        path:'https://github.com/chndrwali',
         name: <RiGithubFill />
     },
     {
-        path:'/',
+        path:'https://www.instagram.com/chndrwali/',
         name: <RiInstagramFill />
     },
     {
-        path:'/',
+        path:'https://web.facebook.com/chandra.w.sanjaya.5',
         name: <RiFacebookFill />
     },
     {
-        path:'/',
+        path:'https://twitter.com/chndrwali',
         name: <RiTwitterXFill />
     },
 ]
@@ -37,7 +37,8 @@ const Socials = ({containerStyles ,iconsStyles}) => {
     return ( 
         <div className={`${containerStyles}`}>
             {icons.map((icon, index) => {
-                return <Link key={index} href={icon.path}>
+                return <Link key={index} href={icon.path} target="_blank"
+                aria-label="Sosmed Candra Wali Sanjaya">
                 <div className={`${iconsStyles}`}>{icon.name}</div>
                 </Link>
             })}

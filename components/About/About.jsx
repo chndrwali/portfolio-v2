@@ -2,6 +2,8 @@ import DevImg from '../Hero/DevImg';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Calendar, Briefcase } from 'lucide-react';
 import Image from 'next/image';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const infoData = [
   {
@@ -11,6 +13,7 @@ const infoData = [
   {
     icon: <PhoneCall size={20} />,
     text: '+62 89652648201',
+    href: 'https://wa.me/+626289652648201',
   },
   {
     icon: <MailIcon size={20} />,
@@ -81,16 +84,16 @@ const skillData = [
     title: 'skills',
     data: [
       {
-        name: 'HTML,CSS',
+        name: 'HTML, CSS, TailwindCSS',
       },
       {
-        name: 'Next JS,JavaScript, TypeScript',
+        name: 'Next JS, React,',
       },
       {
-        name: 'Python,React, TailwindCSS',
+        name: 'Python, JavaScript, TypeScript ',
       },
       {
-        name: 'Github, Git',
+        name: 'Prisma, Keras',
       },
     ],
   },
@@ -98,16 +101,25 @@ const skillData = [
     title: 'tools',
     data: [
       {
-        imgPath: '/about/vscode.svg',
+        imgPath: '/about/vscode.webp',
       },
       {
-        imgPath: '/about/figma.svg',
+        imgPath: '/about/figma.webp',
       },
       {
-        imgPath: '/about/notion.svg',
+        imgPath: '/about/npm.webp',
       },
       {
-        imgPath: '/about/wordpress.svg',
+        imgPath: '/about/google-colab.webp',
+      },
+      {
+        imgPath: '/about/git.webp',
+      },
+      {
+        imgPath: '/about/github.webp',
+      },
+      {
+        imgPath: '/about/vercel.webp',
       },
     ],
   },
@@ -116,7 +128,6 @@ const About = () => {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
-
 
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24">
@@ -142,14 +153,36 @@ const About = () => {
               <div className="text-lg mt-12 xl:mt-8 ">
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
-                    <h3 className="h3 mb-4">Unmatched Service Quality for Over 10 Years</h3>
-                    <p className="subtitle max-w-xl mx-auto xl:mx-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui!</p>
+                    <h3 className="h3 mb-4">Unmatched Service Quality for Over 2 Years</h3>
+                    <p className="subtitle max-w-xl mx-auto xl:mx-0 ">
+                      I am a highly skilled and motivated individual with a passion for software engineering. My experience includes working on various projects, where I have honed my skills in problem-solving, teamwork, and communication.
+                      I am dedicated to delivering high-quality work and thrive in fast-paced environments. Let's work together to bring your ideas to life!
+                    </p>{' '}
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
                         return (
                           <div key={index} className="flex items-center gap-x-4 mx-auto xl:mx-0">
                             <div className="text-primary">{item.icon}</div>
-                            <div>{item.text}</div>
+                            {item.text === '+62 89652648201' ? (
+                              <HoverCard>
+                                <HoverCardTrigger asChild>
+                                  <div className="hover:underline">{item.text}</div>
+                                </HoverCardTrigger>
+                                <HoverCardContent className="w-80">
+                                  <h4 className="h4">Contact me on whatsapp</h4>
+                                  <div className="flex items-center gap-x-4 mx-auto xl:mx-0">
+                                    <div className="text-primary">
+                                      <FaWhatsapp size={20} />
+                                    </div>
+                                    <a className="hover:underline" href={item.href} target="_blank">
+                                      {item.text}
+                                    </a>
+                                  </div>
+                                </HoverCardContent>
+                              </HoverCard>
+                            ) : (
+                              <div>{item.text}</div>
+                            )}
                           </div>
                         );
                       })}
@@ -243,7 +276,7 @@ const About = () => {
 
                           return (
                             <div key={index}>
-                              <Image src={imgPath} width={48} height={48} alt="" priority />
+                              <Image src={imgPath} width={48} height={48} alt="" priority className="rounded-full image-animation" />
                             </div>
                           );
                         })}

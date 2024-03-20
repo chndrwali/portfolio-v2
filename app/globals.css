@@ -90,3 +90,12 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   @apply bg-primary;
 }
+
+.image-animation {
+  transform: translateY(0);
+  transition: transform 0.5s;
+}
+
+.image-animation:hover {
+  transform: translateY(-10px);
+}
