@@ -55,8 +55,8 @@ const Work = () => {
           </Link>
         </div>
         <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
-          <Swiper className="h-[400px] bg-pink-100" slidesPerView={1} breakpoints={{ 640: { slidesPerView: 2 } }} spaceBetween={30} modules={Pagination} pagination={{ clickable: true }}>
-            {projectData.slice(0.4).map((project, index) => {
+          <Swiper className="h-[480px] bg-pink-100" slidesPerView={1} breakpoints={{ 640: { slidesPerView: 2 } }} spaceBetween={30} modules={Pagination} pagination={{ clickable: true }}>
+            {projectData.slice(0, 4).map((project, index) => {
               return (
                 <SwiperSlide key={index}>
                   <ProjectCard project={project} />
