@@ -7,7 +7,7 @@ import ProjectCard from '@/components/Work/ProjectCard';
 const projectData = [
   {
     image: '/work/3.png',
-    category: 'react js',
+    category: 'fullstack',
     name: 'Rukun Perkasa Ecommerce',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
     link: '/',
@@ -52,7 +52,7 @@ const Projects = () => {
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">My Projects</h2>
         <Tabs defaultValue={category} className='mb-24 xl:mb-48'>
-          <TabsList className="w-full grid h-full md:grid-cols-4 lg:max-w-[648px] mb-12 mx-auto md:border dark:border-none">
+          <TabsList className="w-full grid h-full md:grid-cols-5 lg:max-w-[648px] mb-12 mx-auto md:border dark:border-none">
             {categories.map((category, index) => {
               return (
                 <TabsTrigger onClick={() => setCategory(category)} value={category} key={index} className="capitalize w-[162px] md:w-auto">

@@ -11,7 +11,7 @@ import ProjectCard from './ProjectCard';
 const projectData = [
   {
     image: '/work/3.png',
-    category: 'react js',
+    category: 'fullstack',
     name: 'Rukun Perkasa Ecommerce',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
     link: '/',

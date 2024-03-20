@@ -91,6 +91,7 @@ module.exports = {
         work_project_bg_dark:('url(/work/project-bg-dark.png)'),  
         contact_illustration_light:('url(/contact/illustration-light.svg)'),  
         contact_illustration_dark:('url(/contact/illustration-dark.svg)'),  
+        cta_wave:('url(/cta/wave.svg)'),  
       }
     },
   },

@@ -12,6 +12,7 @@ import Socials from './Socials';
 import { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { useRouter } from 'next/navigation';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
 
 const Hero = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -84,10 +85,28 @@ const Hero = () => {
                   </div>
                 </HoverCardContent>
               </HoverCard>
-
-              <Button variant="secondary" className="gap-x-2 border border-primary hover:bg-primary hover:text-white transition-all duration-300" onClick={handleDownloadCV}>
-                {isDownloading ? 'Downloading' + dots : 'Download CV '} {isDownloading ? null : <Download size={18} />}
-              </Button>
+              <AlertDialog>
+                <AlertDialogTrigger>
+                  <Button variant="secondary" className="gap-x-2 border border-primary hover:bg-primary hover:text-white transition-all duration-300">
+                    {isDownloading ? 'Downloading' + dots : 'Download CV '} {isDownloading ? null : <Download size={18} />}
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Download CV Confirmation</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      <div className="flex flex-col gap-2 mb-2">
+                        <span>Thank you for your interest in downloading my CV. Your support is greatly appreciated! 😊</span>
+                        <span>Are you sure you want to proceed with the download?</span>
+                      </div>
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                    <AlertDialogAction onClick={handleDownloadCV}>Continue</AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
             <Socials containerStyles="flex gap-x-6 mx-auto xl:mx-0" iconsStyles="text-foreground text-[22px] hover:text-primary transition-all" />
           </div>
