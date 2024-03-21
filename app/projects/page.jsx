@@ -6,7 +6,7 @@ import ProjectCard from '@/components/Work/ProjectCard';
 
 const projectData = [
   {
-    image: '/work/3.png',
+    image: ['/work/3.png', '/work/1.png'],
     category: 'fullstack',
     name: 'Rukun Perkasa Ecommerce',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
@@ -14,7 +14,7 @@ const projectData = [
     github: '/',
   },
   {
-    image: '/work/1.png',
+    image: ['/work/3.png', '/work/1.png'],
     category: 'react js',
     name: 'Candra Ecommerce',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
@@ -22,7 +22,7 @@ const projectData = [
     github: '/',
   },
   {
-    image: '/work/2.png',
+    image: ['/work/2.png', '/work/1.png'],
     category: 'next js',
     name: 'Rewwis Ecommerce',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
@@ -30,7 +30,7 @@ const projectData = [
     github: '/',
   },
   {
-    image: '/work/4.png',
+    image: ['/work/4.png', '/work/1.png'],
     category: 'react js',
     name: 'Rukun Ecommerce',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
