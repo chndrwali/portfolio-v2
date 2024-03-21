@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { useRouter } from 'next/navigation';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
+import toast from 'react-hot-toast';
 
 const Hero = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -46,10 +47,12 @@ const Hero = () => {
           document.body.appendChild(link);
           link.click();
           setIsDownloading(false);
+          toast.success('CV downloaded successfully!');
         })
         .catch((error) => {
           console.error('Error downloading CV:', error);
           setIsDownloading(false);
+          toast.error('Failed to download CV!');
         });
     }, 2000);
   };
@@ -112,7 +115,7 @@ const Hero = () => {
           </div>
           <div className="hidden xl:flex relative">
             <Badge containerStyles="absolute top-[24%] -left-[5rem]" icon={<RiBriefcase4Fill />} endCountNum={2} badgeText="Years of Experience" />
-            <Badge containerStyles="absolute top-[80%] -left-[1rem]" icon={<RiTodoFill />} endCountNum={6} badgeText="Finished Projects" />
+            <Badge containerStyles="absolute top-[80%] -left-[1rem]" icon={<RiTodoFill />} endCountNum={6} endCountText="k" badgeText="Finished Projects" />
             <Badge containerStyles="absolute top-[50%] -right-8" icon={<RiTeamFill />} endCountNum={6} endCountText="k" badgeText="Happy Clients" />
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
             <DevImg containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom" imgSrc="/hero/developer.webp" />

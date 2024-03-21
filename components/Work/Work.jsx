@@ -2,12 +2,9 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import { projectData } from './data';
 import ProjectCard from './ProjectCard';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 
 
@@ -23,21 +20,24 @@ const Work = () => {
           </Link>
         </div>
         <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
-        <Swiper 
+        <Carousel 
         className="h-full"
-         slidesPerView={1} 
-           breakpoints={{ 640: { slidesPerView: 2 } }} 
-          spaceBetween={30} 
-          modules={{Pagination}}
-           pagination={{ clickable: true }}>
-        {projectData.slice(0, 4).map((project, index) => {
+        opts={{
+          align: "start",
+        }}
+         >
+          <CarouselContent>
+        {projectData.slice(0, 6).map((project, index) => {
         return (
-          <SwiperSlide key={index}>
+          <CarouselItem key={index}  className="md:basis-1/2 lg:basis-1/3">
             <ProjectCard project={project} />
-            </SwiperSlide>
+            </CarouselItem>
          );
          })}
-        </Swiper>
+         </CarouselContent>
+         <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
         </div>
       </div>
     </section>
