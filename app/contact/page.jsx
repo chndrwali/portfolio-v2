@@ -1,6 +1,7 @@
 import Form from '@/components/Form/Form';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { MailIcon, HomeIcon, PhoneCall } from 'lucide-react';
+import Link from 'next/link';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
@@ -24,7 +25,7 @@ const Contact = () => {
           <div className="flex flex-col gap-y-4 xl:gap-y-14 mb-12 xl:mb-24 text-base xl:text-lg">
             <div className="flex items-center gap-x-8 ">
               <MailIcon size={18} className="text-primary " />
-              <div>chndrwali@gmail.com</div>
+              <Link className=" hover:underline" href='mailto:chndrwali@gmail.com'>chndrwali@gmail.com</Link>
             </div>
             <div className="flex items-center gap-x-8 ">
               <HomeIcon size={18} className="text-primary " />
