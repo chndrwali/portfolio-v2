@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <div className="mt-64 sm:mt-0"></div>
       <About />
       <Services />
       <Work />
