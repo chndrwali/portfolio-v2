@@ -3,9 +3,9 @@ export const projectData = [
       image: ['/work/3.png', '/work/1.png','/work/2.png','/work/4.png',],
       category: 'fullstack',
       name: 'Rukun Perkasa',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore velit vitae odio? Adipisci aspernatur sint debitis voluptatum neque blanditiis. Sint quod, inventore excepturi fuga quidem aliquam totam dolorem quibusdam ex quo cum temporibus non ad libero quasi suscipit at blanditiis eveniet? Voluptas ab porro dolorem vero, delectus aperiam error est architecto voluptatum earum pariatur et. Reiciendis harum adipisci exercitationem asperiores ut, molestiae aperiam vitae expedita sint id quam voluptates possimus voluptatem illum, reprehenderit libero quo consectetur, quod repellendus laborum labore aut ipsa ad non. Accusamus obcaecati nulla blanditiis itaque debitis, laborum neque eaque possimus reiciendis ipsam a iure, at perferendis?',
-      link: '/',
-      github: '/',
+      description: 'This project is an e-commerce website that utilizes a variety of tools and frameworks, including MongoDB Atlas for cloud-based database, NextAuth.js for user authentication, Google Cloud Platform as the Google authentication provider, Prisma as the Object Relational Mapping tool, Tailwind CSS for styling framework, Stripe for handling payment processes, and Firebase Storage for saving images. This website is created for facilitating thesis submission.',
+      link: 'https://rukun-perkasa.vercel.app',
+      github: 'https://github.com/chndrwali/RukunPerkasa',
     },
     {
       image: ['/work/rewwis.webp'],
