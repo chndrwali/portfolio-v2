@@ -70,7 +70,7 @@ const ProjectCard = ({ project }) => {
                     <Image src={image} width={247} height={250} alt="" priority className="rounded-lg image-animation" />
                   </HoverCardTrigger>
                   <HoverCardContent>
-                    <div className="overflow-hidden rounded-lg ">
+                    <div className=" min-w-[1000px] overflow-hidden rounded-lg ">
                       <Image src={image} width={400} height={400} alt="" priority className="rounded-lg" />
                     </div>
                   </HoverCardContent>

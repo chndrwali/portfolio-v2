@@ -1,6 +1,6 @@
 export const projectData = [
     {
-      image: ['/work/3.png', '/work/1.png','/work/2.png','/work/4.png',],
+      image: ['/work/rukunperkasa.webp', '/work/rukunperkasa-1.webp','/work/rukunperkasa-2.webp','/work/rukunperkasa-3.webp', '/work/rukunperkasa-4.webp'],
       category: 'fullstack',
       name: 'Rukun Perkasa',
       description: 'This project is an e-commerce website that utilizes a variety of tools and frameworks, including MongoDB Atlas for cloud-based database, NextAuth.js for user authentication, Google Cloud Platform as the Google authentication provider, Prisma as the Object Relational Mapping tool, Tailwind CSS for styling framework, Stripe for handling payment processes, and Firebase Storage for saving images. This website is created for facilitating thesis submission.',
@@ -8,7 +8,7 @@ export const projectData = [
       github: 'https://github.com/chndrwali/RukunPerkasa',
     },
     {
-      image: ['/work/rewwis.webp'],
+      image: ['/work/rewwis.webp', '/work/rewwis-1.webp', '/work/rewwis-2.webp', '/work/rewwis-3.webp', '/work/rewwis-4.webp'],
       category: 'react js',
       name: 'Recycle Waste Wisely',
       description: 'This website is the final project of the Certified Internship and Independent Study at Orbit Future Academy Batch 5. The project is specifically designed for an automated waste classification website. It is built using React Vite for the frontend, Tailwind CSS for styling, and TensorFlow.js for loading data from the model.',
@@ -16,7 +16,7 @@ export const projectData = [
       github: 'https://github.com/chndrwali/RecycleWasteWisely',
     },
     {
-      image: ['/work/togetherboost.webp'],
+      image: ['/work/togetherboost.webp','/work/togetherboost-2.webp',],
       category: 'react js',
       name: 'TogetherBoost App',
       description: 'This website is the final project of the Certified Internship and Independent Study at Dicoding Indonesia Cycle 4. The project revolves around the theme of "Inclusivity in Education" and is built using React Vite for the frontend, Tailwind CSS as the styling framework, Express.js for the backend, and also incorporates the Redux library.',
@@ -24,7 +24,7 @@ export const projectData = [
       github: 'https://github.com/chndrwali/capstone-fe',
     },
     {
-      image: ['/work/twitwar.webp'],
+      image: ['/work/twitwar.webp','/work/twitwar-1.webp','/work/twitwar-2.webp',],
       category: 'react js',
       name: 'Twitwar Forum',
       description: 'As a final submission for the "Becoming a React Web Developer Expert" class, this website is constructed using React Vite, Tailwind CSS, and Redux. It effectively harnesses APIs provided by Dicoding Indonesia, showcasing the skills acquired throughout the course.',
@@ -40,7 +40,7 @@ export const projectData = [
       github: 'https://github.com/chndrwali/MaskedApps',
     },
     {
-      image: ['/work/SrymStore.webp'],
+      image: ['/work/srym.webp','/work/srym-1.webp','/work/srym-2.webp',],
       category: 'submission',
       name: 'Srym Store',
       description: 'This website is created to fulfill the needs of the final semester exam for the E-Commerce course at National Pasim University. Utilizing Progressive Web Apps, Tailwind CSS, and Eslint, we emphasize responsiveness, aesthetic design, and code quality. Progressive Web Apps ensure easy access, Tailwind CSS provides an intuitive interface, and Eslint guarantees high-quality code.',
@@ -48,7 +48,7 @@ export const projectData = [
       github: 'https://github.com/chndrwali/WebEcommerce',
     },
     {
-      image: ['/work/4.png', '/work/1.png'],
+      image: ['/work/cwpa.png'],
       category: 'submission',
       name: 'Candra Food',
       description: 'As a final submission for the "Becoming a React Web Developer Expert" class, this website is constructed using React Vite, Tailwind CSS, and Redux. It effectively harnesses APIs provided by Dicoding Indonesia, showcasing the skills acquired throughout the course.',
