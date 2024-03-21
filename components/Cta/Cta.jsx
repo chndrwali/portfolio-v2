@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Cta = () => {
   return (
-    <section className="py-24 xl:bg-cta_wave xl:bg-no-repeat xl:bg-bottom xl:bg-contain dark:bg-secondary/40">
+    <section className="mt-20px py-24 xl:bg-cta_wave xl:bg-no-repeat xl:bg-bottom xl:bg-contain dark:bg-secondary/40">
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
           <h2 className="h2 max-w-xl text-center mb-8">Prepared to turn your ideas into reality? I'm here to help</h2>

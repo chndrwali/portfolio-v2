@@ -6,43 +6,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import { projectData } from './data';
 import ProjectCard from './ProjectCard';
 
-const projectData = [
-  {
-    image: ['/work/3.png', '/work/1.png','/work/2.png','/work/4.png',],
-    category: 'fullstack',
-    name: 'Rukun Perkasa Ecommerce',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore velit vitae odio? Adipisci aspernatur sint debitis voluptatum neque blanditiis. Sint quod, inventore excepturi fuga quidem aliquam totam dolorem quibusdam ex quo cum temporibus non ad libero quasi suscipit at blanditiis eveniet? Voluptas ab porro dolorem vero, delectus aperiam error est architecto voluptatum earum pariatur et. Reiciendis harum adipisci exercitationem asperiores ut, molestiae aperiam vitae expedita sint id quam voluptates possimus voluptatem illum, reprehenderit libero quo consectetur, quod repellendus laborum labore aut ipsa ad non. Accusamus obcaecati nulla blanditiis itaque debitis, laborum neque eaque possimus reiciendis ipsam a iure, at perferendis?',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: ['/work/1.png', '/work/3.png'],
-    category: 'react js',
-    name: 'Candra Ecommerce',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: ['/work/2.png', '/work/1.png'],
-    category: 'next js',
-    name: 'Rewwis Ecommerce',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: ['/work/4.png', '/work/1.png'],
-    category: 'react js',
-    name: 'Rukun Ecommerce',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-    link: '/',
-    github: '/',
-  },
-];
+
 
 const Work = () => {
   return (
@@ -50,14 +17,14 @@ const Work = () => {
       <div className="container mx-auto">
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
           <h2 className="section-title mb-4">Latest Projects</h2>
-          <p className="subtitle mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, molestiae!</p>
+          <p className="subtitle mb-8">Explore our latest projects showcasing innovative solutions and cutting-edge technology.</p>
           <Link href="/projects">
             <Button>All Projects</Button>
           </Link>
         </div>
         <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
         <Swiper 
-        className="h-[480px]"
+        className="h-full"
          slidesPerView={1} 
            breakpoints={{ 640: { slidesPerView: 2 } }} 
           spaceBetween={30} 

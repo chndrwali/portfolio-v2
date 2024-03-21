@@ -3,43 +3,11 @@
 import { useState } from 'react';
 import { Tabs, TabsList, TabsContent, TabsTrigger } from '@/components/ui/tabs';
 import ProjectCard from '@/components/Work/ProjectCard';
+import { projectData } from '@/components/Work/data';
 
-const projectData = [
-  {
-    image: ['/work/3.png', '/work/1.png'],
-    category: 'fullstack',
-    name: 'Rukun Perkasa Ecommerce',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: ['/work/3.png', '/work/1.png'],
-    category: 'react js',
-    name: 'Candra Ecommerce',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: ['/work/2.png', '/work/1.png'],
-    category: 'next js',
-    name: 'Rewwis Ecommerce',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-    link: '/',
-    github: '/',
-  },
-  {
-    image: ['/work/4.png', '/work/1.png'],
-    category: 'react js',
-    name: 'Rukun Ecommerce',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, qui',
-    link: '/',
-    github: '/',
-  },
-];
 
 const uniqueCategories = ['all projects', ...new Set(projectData.map((item) => item.category))];
+
 const Projects = () => {
   const [categories, setCategories] = useState(uniqueCategories);
   const [category, setCategory] = useState('all projects');
